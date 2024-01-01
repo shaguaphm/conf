@@ -110,9 +110,6 @@ proxy-providers:
   
   Subscribe: {<<: *p, url: "复制订阅地址到这里"}
 
-  临时节点: {<<: *p, url: "https://api.subcloud.xyz/sub?target=clash&url=https%3A%2F%2Fpastebin.com%2Fraw%2FGxR5pELe&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&tfo=false&scv=true&fdn=true&sort=true&udp=true&new_name=true"}
-
-  网易云节点: {<<: *p, url: "https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/NeteaseMusic/AgentNode/Stash.yaml"}
 
 
 
@@ -226,6 +223,7 @@ proxy-groups:
   proxies:
     - 香港节点
     - 台湾节点
+    - 土耳其节点
     - 日本节点
     - 韩国节点
     - 狮城节点
@@ -488,7 +486,17 @@ proxy-groups:
   tolerance: 50
   type: url-test
   url: http://cp.cloudflare.com/generate_204
-
+  # 土耳其节点
+- filter: "^(?=.*(🇹🇷|土耳其|土耳|TR|TUR|Turkey))(?!.*(回国|校园|游戏|教育|🇭🇰|久虚|(?i)GAME|IPV6)).*$"
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Turkey.png
+  include-all: true
+  interval: 600
+  lazy: true
+  name: 土耳其节点
+  proxies: []
+  tolerance: 50
+  type: url-test
+  url: http://cp.cloudflare.com/generate_204
 
 #===================================#
 # 远程规则集
