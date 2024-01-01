@@ -19,7 +19,7 @@
 
 #============UserScript=============#
 # 填写订阅链接用于获取机场流量信息并在主页显示
-subscribe-url: 
+subscribe-url:
 # 模式设置：rule（规则） / global（全局代理）/ direct（全局直连）
 mode: rule
 # 设置日志输出级别
@@ -51,7 +51,7 @@ dns:
   # 解析非IP的dns用的dns服务器，只支持纯IP
   default-nameserver:
     - 114.114.114.114
-    - 202.141.176.93 
+    - 202.141.176.93
     - 202.141.178.13
     - 117.50.10.10
     - 223.5.5.5
@@ -63,7 +63,7 @@ dns:
   fake-ip-range: 198.18.0.1/16
   # 过滤列表中的域名返回真实IP
   fake-ip-filter:
-    - '+.lan' 
+    - '+.lan'
     - '+.stun.*.*'
     - '+.stun.*.*.*'
     - '+.stun.*.*.*.*'
@@ -74,7 +74,7 @@ dns:
     - '+.stun.playstation.net'
     - '+.xboxlive.com'
     - 'xbox.*.*.microsoft.com'
-    - '*.*.xboxlive.com'         
+    - '*.*.xboxlive.com'
     - '*.msftncsi.com'
     - '*.msftconnecttest.com'
     - '*.mcdn.bilivideo.cn'
@@ -203,6 +203,7 @@ proxy-groups:
     - 韩国节点
     - 狮城节点
     - 美国节点
+    - 印度节点
     - 全部节点
     - 策略选择
   type: select
@@ -476,7 +477,17 @@ proxy-groups:
   tolerance: 50
   type: url-test
   url: http://cp.cloudflare.com/generate_204
-
+# 印度节点
+- filter: "(?=.*((?i)\U0001F1FA\U0001F1F8|🇮🇳|印度|班加罗尔|孟买|Mumbai|^IN|India)(?!尼西亚)))^((?!(港|台|日|韩|新|英|平|邀|群|刷新|网|网易|网易云|网易云音乐|音乐|云音乐|Netease|Music|\U0001D40C\U0001D42E\U0001D42C\U0001D422\U0001D41C|Unbolck|Update|music|\U0001F3B5|\U0001F3B6|\U0001F3A7)).)*$"
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/India.png
+  include-all: true
+  interval: 600
+  lazy: true
+  name: 印度节点
+  proxies: []
+  tolerance: 50
+  type: url-test
+  url: http://cp.cloudflare.com/generate_204
 
 
 #===================================#
