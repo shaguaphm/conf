@@ -478,7 +478,7 @@ proxy-groups:
   type: url-test
   url: http://cp.cloudflare.com/generate_204
 # 印度节点
-- filter: "(?=.*((?i)\U0001F1FA\U0001F1F8|🇮🇳|印度|班加罗尔|孟买|Mumbai|^IN|India)(?!尼西亚)))^((?!(港|台|日|韩|新|英|平|邀|群|刷新|网|网易|网易云|网易云音乐|音乐|云音乐|Netease|Music|\U0001D40C\U0001D42E\U0001D42C\U0001D422\U0001D41C|Unbolck|Update|music|\U0001F3B5|\U0001F3B6|\U0001F3A7)).)*$"
+- filter: "(?=.*(🇮🇳|印度|班加罗尔|孟买|Mumbai|^IN|India)(?!尼西亚))(?!.*(回国|校园|游戏|教育|久虚|印尼|GAME|IPV6)).*$"
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/India.png
   include-all: true
   interval: 600
